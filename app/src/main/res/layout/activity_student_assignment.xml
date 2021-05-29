@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/recyclerback"
+    tools:context=".StudentAssignmentActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="assignment name"
+        android:textSize="25sp"
+        android:id="@+id/stud_assignName"
+        android:textColor="#0C0901"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45dp"/>
+
+    <LinearLayout
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/linearbackground"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stud_assigntopic"
+        android:layout_marginLeft="30dp"
+        android:textSize="17sp"
+        android:layout_marginTop="15dp"
+        android:textColor="#0C0901"
+        android:id="@+id/stud_assignTopic"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start date date: "
+        android:textSize="17sp"
+        android:id="@+id/stud_startdate"
+        android:textColor="#0C0901"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submission date: "
+        android:textSize="17sp"
+        android:id="@+id/stud_enddate"
+        android:textColor="#0C0901"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="comment: "
+        android:textSize="17sp"
+        android:textColor="#0C0901"
+        android:id="@+id/stud_comment"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_pdf"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pdf name"
+            android:textColor="#0C0901"
+            android:textSize="18sp"
+            android:id="@+id/stud_pdfText"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Download"
+            android:background="@drawable/buttonback"
+            android:id="@+id/downloadButton"
+            android:layout_gravity="end"
+            android:onClick="downloadPDF"/>
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="open"
+            android:id="@+id/openButton"
+            android:layout_gravity="end"
+            android:background="@drawable/buttonback"
+            android:visibility="invisible"
+            android:onClick="openPDF"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/cardView_assign"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/comment_assign">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/stud_pdf_image"
+            android:layout_marginLeft="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/stud_pdf_name"
+            android:hint="PDF Name"/>
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Open PDF"
+            android:background="@drawable/buttonback"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="65dp"
+            android:onClick="studopenpdf"
+            android:layout_marginBottom="10dp"/>
+    </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/stud_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/buttonback"
+            android:onClick="submit"
+            android:text="submit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Given Time Finsihed"
+            android:background="@drawable/edittext"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingLeft="36dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#0C0901"
+            android:visibility="invisible"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/givenTime"/>
+
+
+    </LinearLayout>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/stud_pdfView">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_close"
+            android:layout_alignParentRight="true"
+            android:onClick="studclosepdf"/>
+
+    </com.github.barteksc.pdfviewer.PDFView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

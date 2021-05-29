@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/createclass"
+    android:padding="15dp"
+    tools:context=".WriteClassroomActivity">
+
+    <LinearLayout
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/linearbackground"
+        android:layout_gravity="center_horizontal"
+        android:padding="30dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/classSubject"
+            android:hint="Subject"
+            android:background="@drawable/edittext"
+            android:textColorHint="#0C0901"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/classTeacher"
+            android:background="@drawable/edittext"
+            android:textColorHint="#0C0901"
+            android:paddingLeft="15dp"
+            android:hint="Teacher"
+            android:layout_marginTop="15dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:textColorHint="#0C0901"
+            android:paddingLeft="15dp"
+            android:id="@+id/classBatch"
+            android:hint="Batch : Example-2018"
+            android:layout_marginTop="15dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:textColorHint="#0C0901"
+            android:paddingLeft="15dp"
+            android:id="@+id/classCourse"
+            android:hint="Course : Example-BCS"
+            android:layout_marginTop="15dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:textColorHint="#0C0901"
+            android:paddingLeft="15dp"
+            android:id="@+id/classCode"
+            android:hint="Create Class Code"
+            android:layout_marginTop="15dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:background="@drawable/buttonback"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="createClass"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

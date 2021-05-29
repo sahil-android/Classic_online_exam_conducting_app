@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/recyclerback"
+    tools:context=".NewAssignmentActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0C0901"
+        android:text="assignment name"
+        android:textSize="25sp"
+        android:id="@+id/submitted_assignName"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:layout_width="343dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="180dp"
+        android:background="@drawable/linearbackground"
+        android:layout_marginTop="89dp"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submitted_assigntopic"
+        android:textColor="#0C0901"
+        android:layout_marginLeft="30dp"
+        android:textSize="17sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/submitted_assignTopic"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start date date: "
+        android:textSize="17sp"
+        android:textColor="#0C0901"
+        android:id="@+id/submitted_startdate"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submission date: "
+        android:textSize="17sp"
+        android:textColor="#0C0901"
+        android:id="@+id/submitted_enddate"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="comment: "
+        android:textSize="17sp"
+        android:id="@+id/submitted_comment"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="#0C0901"
+        android:layout_marginLeft="30dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submitted Files"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="310dp"
+        android:textColor="#0C0901"
+        android:textSize="19sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_submittedpdf"
+        android:layout_width="343dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/linearbackground"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="355dp"/>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:visibility="invisible"
+        android:layout_height="match_parent"
+        android:id="@+id/submitted_pdfView">
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="closesubmittedPDF"
+            android:background="@drawable/ic_close"
+            android:layout_alignParentRight="true"/>
+
+
+    </com.github.barteksc.pdfviewer.PDFView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

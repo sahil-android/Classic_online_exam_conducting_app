@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/recyclerback"
+    tools:context=".ClassActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOUR CLASS"
+            android:textSize="21sp"
+            android:textColor="#FAFDFDFA" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Myology"
+        android:textColor="#0C0901"
+        android:id="@+id/subjectText"
+        android:layout_marginTop="35dp"
+        android:textSize="35sp"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textColor="#0C0901"
+        android:id="@+id/teacherText"
+        android:text="*Rocky bhardwaj*"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="45dp"/>
+
+    <LinearLayout
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/linearbackground">
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/messagebuttons"
+        android:onClick="messageButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="assignmentButton"
+        android:background="@drawable/exambutton"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clasroom Code - 1561651"
+        android:paddingTop="10dp"
+        android:paddingLeft="25dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/buttonback"
+        android:id="@+id/class_roomcode"
+        android:layout_marginTop="40dp"
+        android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
